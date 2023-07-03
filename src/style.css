@@ -368,17 +368,36 @@
   .accordion-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 100px 50px 100px 50px;
   }
 }
-.accordion-main h1 {
+.accordion-main .accordion-content1 h1 {
   font-weight: 800;
   color: rgb(0, 41, 106);
   font-size: 20px;
-  text-align: center;
 }
-.accordion-main p {
-  text-align: center;
+@media (max-width: 991px) and (min-width: 0px) {
+  .accordion-main .accordion-content1 h1 {
+    text-align: center;
+  }
+}
+@media (max-width: 1920px) and (min-width: 992px) {
+  .accordion-main .accordion-content1 h1 {
+    font-size: 30px;
+  }
+}
+.accordion-main .accordion-content1 p {
   color: rgb(0, 41, 106);
+}
+@media (max-width: 991px) and (min-width: 0px) {
+  .accordion-main .accordion-content1 p {
+    text-align: center;
+  }
+}
+@media (max-width: 1920px) and (min-width: 992px) {
+  .accordion-main .accordion-content1 p {
+    width: 75%;
+  }
 }
 
 .gap-between {
@@ -428,19 +447,38 @@
 @media (max-width: 1920px) and (min-width: 992px) {
   .testimonials-section {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 100px 0px 40px 40px;
+    overflow: hidden;
   }
 }
-.testimonials-section h1 {
+@media (max-width: 1920px) and (min-width: 992px) {
+  .testimonials-section .content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.testimonials-section .content h1 {
   color: rgb(245, 245, 245);
   font-size: 30px;
   font-weight: 800;
   text-align: center;
 }
-.testimonials-section .testimonialstxt {
-  text-align: center;
+.testimonials-section .content .testimonialstxt {
   color: rgb(245, 245, 245);
   padding: 0px 0px 60px 0px;
+}
+@media (max-width: 991px) and (min-width: 0px) {
+  .testimonials-section .content .testimonialstxt {
+    text-align: center;
+  }
+}
+@media (max-width: 1920px) and (min-width: 992px) {
+  .testimonials-section .content .testimonialstxt {
+    width: 80%;
+  }
 }
 .testimonials-section .swipernav-buttons {
   display: flex;
@@ -460,17 +498,13 @@
   font-weight: 800;
 }
 .testimonials-section .card h5 {
-  color: rgb(245, 245, 245);
-  /* font-size: 25px; */
+  color: #FFFFFF;
+  opacity: 65%;
   font-weight: 800;
 }
 .testimonials-section .card .testimonials-txt {
   color: rgb(245, 245, 245);
   font-size: 18px;
-  /*    @include mediaQuery(1920px, 992px){
-         width: 87%;
-      }
-  */
 }
 .testimonials-section .card button {
   background-color: rgb(119, 142, 225);
@@ -485,12 +519,29 @@
   background-color: rgb(248, 248, 248);
   padding: 100px 30px 100px 30px;
 }
+@media (max-width: 1920px) and (min-width: 992px) {
+  .freelancer-section {
+    padding: 100px 0px 100px 80px;
+  }
+}
+@media (max-width: 1920px) and (min-width: 992px) {
+  .freelancer-section .swipernav-buttons {
+    padding: 0px 0px 0px 1190px;
+  }
+}
 .freelancer-section h1 {
   color: rgb(3, 20, 79);
   font-size: 30px;
   font-weight: 800;
   text-align: center;
   padding: 0px 0px 60px 0px;
+}
+@media (max-width: 1920px) and (min-width: 992px) {
+  .freelancer-section h1 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 40px;
+  }
 }
 .freelancer-section .case-section {
   background-color: rgb(248, 248, 248);

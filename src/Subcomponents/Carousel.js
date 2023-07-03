@@ -25,8 +25,8 @@ const  Carousel = () => {
 
           <SwiperSlide className="res-slide" > <Case image='images/second.png' header='Small Housing & Domain Registration Companies' title='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                       ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' btn0=' READ MORE '  /></SwiperSlide>
+                       veniam, laboris nisi Duis aute ut ex
+                       . Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' btn0=' READ MORE '  /></SwiperSlide>
 
          <SwiperSlide className="res-slide" > <Case image='images/three.png' header='Company Registries' title='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

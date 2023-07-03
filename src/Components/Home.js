@@ -111,29 +111,24 @@ const Home = () => {
 
              <div className="testimonials-section">
                 <div className="content">
-                <h1>Client Testimonials</h1>
-                <p className="testimonialstxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                   labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                   voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                   </div>
-               <Carousel2 />
+                    <h1>Client Testimonials</h1>
+                    <p className="testimonialstxt">We value client feedback to help keep making revisions to our product to give more value to you the end user. These are some of the awesome reviews we got from some of our clients.</p>
+                </div>
+                <Carousel2 />
            </div>    
 
             <div className="accordion-main">
-            <div className="accordion-content1">
+                <div className="accordion-content1">
                    <h1>Frequently Asked Questions</h1>
                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                       laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
                       voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-            </div>
-               
-            <div className="accordion-content2">
-                <BasicExample/> 
-            </div>
-
                </div>
+                <div className="accordion-content2">
+                    <BasicExample/> 
+                </div>
+            </div>
 
                <div className="partners-section">
                <h1>We’ve Been Featured In</h1>

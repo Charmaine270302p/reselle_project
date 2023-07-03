@@ -22,12 +22,12 @@ const  Carousel2 = () => {
                         /></SwiperSlide>
 
           <SwiperSlide className="res-slide" > 
-          <Case1 images='images/Rectangle 16.png' header='Jane Doe' subheader='Company Name' title='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+          <Case1 images='images/Rectangle 20.png' header='Jane Doe' subheader='Company Name' title='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
                         /></SwiperSlide>
 
       
           <SwiperSlide className="res-slide" > 
-          <Case1 images='images/Rectangle 16.png' header='Jane Doe' subheader='Company Name' title='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+          <Case1 images='images/Rectangle 20-1.png' header='Jane Doe' subheader='Company Name' title='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
                         /></SwiperSlide>
           
           
