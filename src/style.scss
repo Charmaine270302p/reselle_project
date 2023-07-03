@@ -13,7 +13,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-   padding: 120px 30px 170px 30px;
+    padding: 120px 30px 170px 30px;
+    @include mediaQuery(1920px, 992px){
+      height: 80vh;
+      background-image:url(../public/images/desktoplogo.png) ;
+      background-position: center;
+      background-size: cover;
+  }
 
     h1{
         color: white;
@@ -322,15 +328,6 @@
 }
 
   .content-features{
- /*    @include mediaQuery(1920px, 992px){
-     display: flex;
-     justify-content: flex-start;
-     align-items: flex-start;
-     flex-direction: column;
-     background-color: aqua;
-     text-align: start;
-
-  } */
 
     .cardheader{
       display: flex;
@@ -353,11 +350,6 @@
     p{
         color: rgb(0, 41, 106);
         text-align: center;
-  /*       @include mediaQuery(1920px, 992px){
-          display: flex;
-          justify-content: flex-start;
-          align-items: flex-start;
-        } */
     }
    
 }  
@@ -373,6 +365,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+  @include mediaQuery(1920px, 992px){
+    height: 80vh;
+    background-image:url(../public/images/desktoplogo.png) ;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
   h1{
       color: white;
@@ -400,8 +403,6 @@
       font-weight: 700;
   }
 }
-
-
 
 .accordion-main{
   padding: 100px 20px 100px 20px;
@@ -477,11 +478,11 @@
   margin: 0px 0.5rem;
   margin-top: 30px;
   transition: all .5s;
-}
 
-.swipernav-buttons button:hover {
-  background-color: hsl(210, 100%, 40%);
-  cursor: pointer;
+  &:hover{
+    background-color: hsl(210, 100%, 40%);
+    cursor: pointer;
+  }
 }
 
 .testimonials-section{
@@ -649,7 +650,7 @@
   }
 
   .partner-section{
-    .ii{
+    .partner-content{
       display: flex;
       align-items: center;
       justify-content: center;

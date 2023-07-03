@@ -5,7 +5,7 @@ const  Case2 = (props) => {
      
 <>
     <div className="partner-section">
-        <div className="ii">
+        <div className="partner-content">
             <img src= {props.images} alt=""/>
         </div>
 
