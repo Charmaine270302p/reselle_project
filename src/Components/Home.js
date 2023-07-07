@@ -166,14 +166,14 @@ const Home = () => {
                 </div>
 
                 <div className="footercontent2">
-                    <h1>Libraries & Plugins</h1>
+                    <h1>Community</h1>
                     <span> Facebook</span>  
                     <span> Developer Forums</span>
                     <span>Twitter</span>
                 </div>
                
                 <div className="footercontent2">
-                    <h1>Libraries & Plugins</h1>
+                    <h1>More</h1>
                     <span>Blog</span>  
                     <span> Docs</span>
                     <span>About Us</span>
@@ -181,7 +181,10 @@ const Home = () => {
                     <span>Privacy Policy</span>
                 </div>
 
-                <p>Copyright © 2022 Resellme.</p>
+                <div className="footer-txt">
+                    <p>Copyright © 2022 Resellme.</p>
+                </div>
+               
 
            </div>    
 

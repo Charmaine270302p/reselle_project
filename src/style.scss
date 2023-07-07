@@ -1,9 +1,63 @@
 @use './variables/' as *;
 
-*{
+
+:root{
+  --body_background:rgb(255, 255, 255);
+  --body_color: rgb(3, 20, 79);
+  --body_buttoncolor: rgb(3, 20, 79) ;
+  --body_inbuttoncolor: rgb(253, 253, 255) ;
+}
+
+[data-theme="dark"]{
+  --body_background: rgb(3, 20, 79) ;
+  --body_color:white;
+  --body_buttoncolor:rgba(255, 253, 253, 0.4);
+  --body_inbuttoncolor: rgb(6, 6, 6) ;
+}
+
+
+.dark_mode {
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+.dark_mode_label {
+  width: 65px;
+  height: 25px;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+      inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  gap: 24px;
+}
+
+.dark_mode_input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.dark_mode_input:checked + .dark_mode_label {
+  background: #242424;
+}
+.dark_mode_input:checked + .dark_mode_label:after {
+  left: 62px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+.dark_mode_label:active:after {
+  width: 30px;
+}
+
+/* *{
     padding: 0;
     margin: 0;
-}
+    transition: all 0.3s ease-in-out;
+} */
 
 .hero{
     background-image:url(../public/images/heropic.png) ;
@@ -15,7 +69,7 @@
     flex-direction: column;
     padding: 120px 30px 170px 30px;
     @include mediaQuery(1920px, 992px){
-      height: 80vh;
+      height: 100vh;
       background-image:url(../public/images/desktoplogo.png) ;
       background-position: center;
       background-size: cover;
@@ -25,6 +79,9 @@
         color: white;
         font-size: 50px;
         text-align: center;
+        @include mediaQuery(1920px, 992px){
+          width: 40%;
+       }
     }
 
     p{
@@ -39,6 +96,10 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
+        @include mediaQuery(1920px, 992px){
+          flex-direction: row;
+          padding: 40px 0px 40px 0px;
+       }
     }
 
     .btn1{
@@ -65,7 +126,9 @@
       width: 80%;
 
       @include mediaQuery(1920px, 992px){
-       display: none;
+        width: 60%;
+        position: absolute;
+        top: 500px;
     }
   }
 }
@@ -76,14 +139,37 @@
     display: flex;
     gap: 80px; 
     overflow: hidden;
-    padding: 30px 15px 0px 15px;  
+    padding: 30px 15px 0px 15px; 
+   @include mediaQuery(1920px, 992px){
+   display: none; 
+  } 
+    
+    
+/*     @include mediaQuery(1920px, 992px){
+   gap: 20px;
+   padding: 0px 0px 0px 0px;  
+  } */
 
     ul{
-      color: purple;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+/*       @include mediaQuery(1920px, 992px){
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    } */
+
+   
     }
 
     img{
         width: 30%;
+        @include mediaQuery(1920px, 992px){
+          width: 13%;
+      }
     }
 
     .navall{
@@ -96,6 +182,9 @@
             color: white;
             font-weight: 800;
         }
+        @include mediaQuery(1920px, 992px){
+          display: none;
+       }
     }
 
       .hamburger {
@@ -151,31 +240,115 @@
         right: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgb(101, 103, 128);
         z-index: 1000;
         visibility: hidden;
+  /*       @include mediaQuery(1920px, 992px){
+          visibility: visible;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          background-color:transparent;
+       } */
       }
     
       .menu.show {
         top: 10%;
         opacity: 1;
         visibility: visible;
+  /*       @include mediaQuery(1920px, 992px){
+          top: 0;
+        } */
       }
     
       .menu li {
         margin-right: 0;
         margin-bottom: 15px;
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        list-style: none;
+
+ /*        @include mediaQuery(1920px, 992px){
+          font-size: 22px;
+          color: rgb(232, 12, 12);
+          list-style: none;
+      } */
+        img{
+          width: 20%;
+        }
       } 
 }
 
+
+
+.navbar1{
+  display: none;
+  @include mediaQuery(1920px, 992px){
+    display: flex;
+    position: absolute;
+    width: 100%;
+    gap: 400px;
+    padding: 40px 40px 0px 40px;
+  /*   background-color: aqua; */
+
+    .first-nav{
+ 
+      display: flex;
+      ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      
+        li {
+          margin-right: 0;
+          margin-bottom: 15px;
+          font-size: 22px;
+          color: rgb(255, 255, 255);
+          list-style: none;
+        }
+      }
+
+      .img1{
+        width: 30%;
+        height: 66%;
+      }
+
+    }
+
+    ul{
+      display: flex;
+    
+      gap: 30px;
+      li {
+        margin-right: 0;
+        margin-bottom: 15px;
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        list-style: none;
+
+        img{
+          width: 20%;
+        }
+      } 
+
+    }
+
+ }
+ 
+  
+}
+
+
 .about{
+  background-color: var(--body_background);
     padding: 160px 15px 0px 15px;
     display: grid;
     grid-template-columns: 1fr;
     @include mediaQuery(1920px, 992px){
       display: grid;
       grid-template-columns:(1fr 1fr);
-      padding: 110px 65px 130px 0px;
+      padding: 500px 65px 130px 0px;
    }
 
    .about-img{
@@ -204,14 +377,14 @@
        }
 
         h1{
-            color: rgb(3, 20, 79);
+            color: var(--body_color);
             font-size: 40px;
             font-weight: 600;
         }
     
         p{
             font-size: 22px;
-            color: rgb(0, 41, 106);
+            color:var(--body_color);
             @media (max-width: 575px) {
               text-align: center; 
             }
@@ -223,17 +396,15 @@
         }
 
         .btn3{
-            background-color:  rgb(3, 20, 79) ;
-            border: 1px solid   rgb(3, 20, 79)  ;
-            color: rgb(252, 250, 250);
+            background-color:  var(--body_buttoncolor) ;
+            border: 1px solid   var(--body_buttoncolor) ;
+            color: var(--body_inbuttoncolor);
             padding: 12px 40px 12px 40px;
             font-size: 22px;
             font-weight: 700;
         }
     }
 }
-
-
 
 .card_content1{
     padding: 0px 50px 0px 50px;
@@ -412,7 +583,6 @@
     padding: 100px 50px 100px 50px;
 }
 .accordion-content1{
-
   h1{
     font-weight: 800;
     color: rgb(0, 41, 106);
@@ -424,7 +594,6 @@
       font-size: 30px;
   }
   }
-
   p{
     color: rgb(0, 41, 106);
     @include mediaQuery(991px, 0px){
@@ -435,36 +604,26 @@
   }
   }
 }
-
 }
 
 .gap-between{
   padding: 10px 0px 10px 0px;
 }
-
-
 .na{
   background-color: aqua;
   height: 100vh;
 }
-
-
-
 .swiper {
   padding: 2rem;
- 
 }
 
  .swiper .res-slide {
-
   @include mediaQuery(1920px, 992px){
     min-width: 300px;
     max-width: 400px;
     min-height: 350px;
     border-radius: 20px;
  }
-
-
 } 
 
 .swipernav-buttons button {
@@ -521,19 +680,13 @@
    width:80%;
   
  }
-
   }
-
-
  }
-
   .swipernav-buttons{
     display: flex;
     align-items: center;
     justify-content: center;
-  
   }
-
 
   .card{
     background-color: rgb(0, 59, 128);
@@ -662,18 +815,16 @@
   }
 }
 
-
-
-
 .footersection{
   background-color: rgb(47, 55, 71);
- padding: 70px 0px 30px 0px;
+  padding: 70px 0px 30px 0px;
   width: 100%;
   display: grid;
   gap: 25px;
   @include mediaQuery(1920px, 992px){
     display: grid;
     grid-template-columns:repeat(3, 1fr);
+/*     padding: 70px 80px 70px 190px; */
 }
 
   .footerlogo{
@@ -698,24 +849,36 @@
     h1{
       color: white;
       font-weight:800;
+      @include mediaQuery(1920px, 992px){
+      font-size: 25px;
+      }
     }
 
     span{
       color: white;
       font-size: 18px;
     }
-
-    
   }
+  .footer-txt{
+    p{
+      color: white;
+      text-align: center;
 
-  p{
-    color: white;
-    text-align: center;
+/*       @include mediaQuery(1920px, 992px){
+           display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #018181;
+          width: 100%; 
+          grid-column-start: -3;
+          grid-column-end: -2;
+      } */
 
-    @include mediaQuery(1920px, 992px){
-      display: flex;
-      align-items: center;
-  }
-   
+      @include mediaQuery(1920px, 992px){
+          display: grid;
+          grid-column-start: 3;
+          grid-column-end: -2;
+      } 
+    }
   }
 }
