@@ -151,13 +151,12 @@ const Home = () => {
            </div>      
 
 
-
            <div className="footersection">
                 <div className="footerlogo">
                     <img src= 'images/resellme-logo 3.png' alt=""/>
                 </div>
                
-
+                    <div className="footerreverse">
                 <div className="footercontent1">
                     <h1>Libraries & Plugins</h1>
                     <span>SDKs</span>  
@@ -179,6 +178,7 @@ const Home = () => {
                     <span>About Us</span>
                     <span>Terms of Service</span>
                     <span>Privacy Policy</span>
+                </div>
                 </div>
 
                 <div className="footer-txt">
